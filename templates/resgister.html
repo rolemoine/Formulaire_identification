@@ -1,0 +1,36 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <!link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}" -->
+    </head>
+    <body>
+        <div id="register">
+            <!-- zone de connexion -->
+
+            <form action="" method="POST">
+                <h1>Register</h1>
+
+                <label><b>username</b></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+                <label><b>password</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+                <input type="submit" id='submit' value='SUBMIT' >
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+                {% block body %}{% endblock %}
+
+
+            </form>
+        </div>
+    </body>
+</html>
