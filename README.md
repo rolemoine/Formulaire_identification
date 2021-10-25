@@ -2,10 +2,10 @@
 
 Dans ce répertoire on retrouve un formulaire d'identification sécurisé afin de se connecter à une page.
 Les nouveaux utilisateurs pourront se créer un compte et le mot de passe sera hashé grâce à la bibliothèque werkzeug. La clé de sécurité 
-permettant de vérifier et de crypter le mot de passe à été laissée dans le fichier Python. 
+permettant de vérifier et de crypter le mot de passe a été laissée dans le fichier Python. 
 
 La framework flask a été utilisée lors de ce projet et le langage utilisé est le langage Python.
-Aussi, après avoir télécharger les bibliothèques contenues dans requirements.txt, il faudra exécuter le fichier app.py puis 
+Aussi, après avoir téléchargé les bibliothèques contenues dans requirements.txt, il faudra exécuter le fichier app.py puis 
 se connecter au local host: 127.0.0.1:5000/login
 
 L'arborescence se déroule comme suit :
@@ -29,4 +29,4 @@ L'arborescence se déroule comme suit :
 
 5 directories, 11 files
 
-Enfin, une base de donnée en SQL a été utilisée pour stocker les identifiants et mot de passe de l'ensemble des utilisateurs.
+Enfin, une base de donnée en SQL a été utilisée pour stocker les identifiants et mots de passe de l'ensemble des utilisateurs.
