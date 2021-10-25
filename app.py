@@ -108,5 +108,4 @@ def bienvenue():
     '''
     return render_template("bienvenue.html")
 
-#app.run(host='0.0.0.0',port=81)
 app.run(debug=True)
