@@ -26,13 +26,12 @@ db = SQLAlchemy(app)
 
 # definition des classes des tables contenues dans la base de donnees
 class users(UserMixin,db.Model):
-#    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(200),primary_key=True,unique=True)
     password = db.Column(db.String(2000))
 
 
 #
-@app.route('/register', methods=('GET', 'POST'))
+@app.route('/register', methods=('POST','GET'))
 def register():
     '''
     fonction permettant de recuperer les donnees remplies par l'utilisateur sur la
@@ -54,10 +53,10 @@ def register():
             db.session.commit()
             return redirect(url_for("login"))
         else:
-            error = "username exists"
+            error = "username already exists"
         flash(error)
-        return render_template('resgister.html')
-    return render_template('resgister.html')
+        return render_template('register.html')
+    return render_template('register.html')
 
 
 
@@ -87,18 +86,17 @@ def login():
             error = None
             if not username_input:
                 error = 'Username is required.'
-            elif not password_input:
+            if not password_input:
                 error = 'Password is required.'
             if error is None:
-                user = users.query.filter_by(username=username_input).first()
+                user = db.session.query(users).filter_by(username=username_input).first()
                 if not user :
-                    error = '<h1>Username does not exist</h1>'
+                    error = 'Username does not exist'
                 elif check_password_hash(user.password , password_input) :
                     return redirect(url_for("bienvenue"))
                 else:
                     error = "wrong password"
         flash(error)
-        return render_template("login.html")
     return render_template("login.html")
 
 
