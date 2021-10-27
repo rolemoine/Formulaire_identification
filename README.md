@@ -11,20 +11,35 @@ se connecter au local host: 127.0.0.1:5000/login
 L'arborescence se déroule comme suit :
 
 ├── app.py
+
 ├── data2.db
+
 ├── freeze
+
 ├── __pycache__
+
 │   └── app.cpython-38.pyc
+
 ├── requirements.txt
+
 ├── static
+
 │   ├── css
+
 │   │   └── login.css
+
 │   └── pictures
+
 │       ├── fjord.jpeg
+
 │       └── index.jpg
+
 └── templates
+
     ├── bienvenue.html
+    
     ├── login.html
+
     └── register.html
 
 5 directories, 11 files
