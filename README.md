@@ -11,9 +11,7 @@ se connecter au local host: 127.0.0.1:5000/login
 L'arborescence se déroule comme suit :
 
 ├── app.py
-
 ├── data2.db
-
 ├── freeze
 
 ├── __pycache__
