@@ -12,9 +12,6 @@ L'arborescence se déroule comme suit :
 
 ├── app.py  
 ├── data2.db  
-├── freeze  
-├── __pycache__  
-│   └── app.cpython-38.pyc  
 ├── requirements.txt  
 ├── static  
 │   ├── css  
@@ -23,10 +20,11 @@ L'arborescence se déroule comme suit :
 │       ├── fjord.jpeg  
 │       └── index.jpg  
 └── templates  
-    ├── bienvenue.html      
+    ├── bienvenue.html  
     ├── login.html  
     └── register.html  
 
-5 directories, 11 files
+4 directories, 9 files
+
 
 Enfin, une base de donnée en SQL a été utilisée pour stocker les identifiants et mots de passe de l'ensemble des utilisateurs.
